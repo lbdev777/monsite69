@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fièrement Québécois</title>
+
+<style>
+:root {
+    --black: #000;
+    --white: #fff;
+    --content: rgba(0,0,0,0.75);
+    --button: #ffea00;
+    --slide: #00ffff;
+    --blue: #0057ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 64px #000, inset 0 0 100px #000;
+}
+
+#home {
+    background: linear-gradient(135deg, #001a44, #000, #003b8f);
+}
+
+#about {
+    background: linear-gradient(135deg, #000, #001f4d, #000);
+}
+
+#collections {
+    background: linear-gradient(135deg, #001a44, #000, #003b8f);
+}
+
+#contact {
+    background: linear-gradient(135deg, #000, #001f4d, #000);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 32px;
+    background: var(--content);
+    backdrop-filter: blur(3px);
+    animation: openBox 1s ease forwards;
+    clip-path: polygon(0 32px, 32px 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%);
+}
+
+@keyframes openBox {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: white;
+    color: #0057ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    font-weight: 900;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+}
+
+.nameContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.name {
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.line {
+    height: 6px;
+    background: white;
+    flex: 1;
+}
+
+.homeButtons,
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background: var(--button);
+    border: none;
+    cursor: pointer;
+    padding: 0 18px;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: black;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
+    position: relative;
+    overflow: hidden;
+    transition: 0.15s;
+}
+
+button:hover {
+    background: var(--slide);
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.sectionTitle {
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+}
+
+.text {
+    max-width: 650px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    max-width: 1000px;
+}
+
+.card {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardImage {
+    width: 320px;
+    height: 160px;
+    background: linear-gradient(135deg, #0057ff, #ffffff, #0057ff);
+    clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+    box-shadow: inset 0 0 20px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003b8f;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+.card h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.35;
+    color: white;
+    text-align: center;
+}
+
+.project {
+    width: 320px;
+    height: 160px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 20px;
+    background:
+        linear-gradient(90deg, var(--button) 50%, transparent 50%) top left / 20px 2px no-repeat,
+        linear-gradient(90deg, transparent 50%, var(--button) 50%) bottom right / 20px 2px no-repeat,
+        linear-gradient(0deg, var(--button) 50%, transparent 50%) top left / 2px 20px no-repeat,
+        linear-gradient(0deg, transparent 50%, var(--button) 50%) bottom right / 2px 20px no-repeat;
+    transition: 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.04);
+    background-color: rgba(255,255,255,0.05);
+}
+
+.project h3 {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.project p {
+    font-size: 15px;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .name {
+        font-size: 28px;
+    }
+
+    .cards {
+        max-width: 320px;
+    }
+
+    section {
+        padding: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section id="home">
+    <div class="content">
+        <div class="logo">⚜</div>
+
+        <div class="nameContainer">
+            <div class="line"></div>
+            <div class="name">Fièrement Québécois</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="homeButtons">
+            <a href="#about"><button>À propos</button></a>
+            <a href="#collections"><button>Collections</button></a>
+            <a href="#contact"><button>Contact</button></a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="content">
+        <div class="sectionTitle">À propos</div>
+        <p class="text">
+            Fièrement Québécois est une marque streetwear inspirée de l’identité,
+            de la culture et de la fierté du Québec.
+        </p>
+
+        <div class="buttons">
+            <a href="#home"><button>Accueil</button></a>
+            <a href="#collections"><button>Collections</button></a>
+            <a href="#contact"><button>Contact</button></a>
+        </div>
+    </div>
+</section>
+
+<section id="collections">
+    <div class="content">
+        <div class="sectionTitle">Collections</div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="cardImage">⚜</div>
+                <h3>Fleur de lys</h3>
+                <p>Designs propres, simples et portables au quotidien.</p>
+            </div>
+
+            <div class="card">
+                <div class="cardImage">QC</div>
+                <h3>Premium</h3>
+                <p>Hoodies, t-shirts et pièces avec une vibe plus haut de gamme.</p>
+            </div>
+
+            <div class="card">
+                <div class="cardImage">LIBRE</div>
+                <h3>Indépendant</h3>
+                <p>Une collection plus forte, plus assumée, faite pour se démarquer.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="#home"><button>Accueil</button></a>
+            <a href="#about"><button>À propos</button></a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="content">
+        <div class="sectionTitle">Contact</div>
+
+        <div class="cards">
+            <div class="project">
+                <h3>Instagram</h3>
+                <p>@fierement_quebecois_</p>
+            </div>
+
+            <div class="project">
+                <h3>Site web</h3>
+                <p>fierementquebecois.com</p>
+            </div>
+
+            <div class="project">
+                <h3>Commande</h3>
+                <p>Écris-nous pour les drops, tailles et nouveautés.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="#home"><button>Accueil</button></a>
+            <a href="#collections"><button>Collections</button></a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
