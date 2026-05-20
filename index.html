@@ -1,153 +1,202 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fièrement Québécois</title>
+<title>Quark Style Page</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: white;
+    background: #f4f1ea;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 35px 22px;
 }
 
 header {
-    background: linear-gradient(135deg, #0055A4, #003366);
-    padding: 80px 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 64px;
-    letter-spacing: 4px;
-    font-weight: bold;
-}
-
-header p {
-    margin-top: 20px;
-    font-size: 22px;
-    opacity: 0.9;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
-    background: white;
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 40px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    transform: scale(1.05);
-}
-
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.section p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.8;
-    color: #cccccc;
-}
-
-.products {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #111;
+    padding-bottom: 18px;
+    margin-bottom: 45px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    margin-top: 60px;
+    margin-bottom: 75px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1;
+    margin: 0 0 20px;
+    font-weight: normal;
+}
+
+.hero p {
+    max-width: 720px;
+    font-size: 22px;
+    line-height: 1.55;
+}
+
+.links {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
     flex-wrap: wrap;
-    margin-top: 50px;
 }
 
-.card {
+.links a {
+    color: #111;
+    border: 1px solid #111;
+    padding: 9px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.links a:hover {
     background: #111;
-    border-radius: 20px;
-    padding: 30px;
-    width: 280px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    color: #f4f1ea;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 15px;
+section {
+    border-top: 1px solid #111;
+    padding: 35px 0;
 }
 
-.card h3 {
-    margin-top: 20px;
-    font-size: 28px;
+section h2 {
+    font-size: 32px;
+    margin: 0 0 20px;
+    font-weight: normal;
 }
 
-.card p {
+.item {
+    margin-bottom: 28px;
+}
+
+.item h3 {
+    font-size: 22px;
+    margin: 0 0 8px;
+}
+
+.item p {
     font-size: 18px;
-    color: #bbbbbb;
+    line-height: 1.55;
+    max-width: 760px;
+    margin: 0;
 }
 
 footer {
-    padding: 40px 20px;
-    text-align: center;
-    background: #050505;
-    color: #888;
+    border-top: 1px solid #111;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 14px;
 }
 </style>
 </head>
+
 <body>
+<div class="wrapper">
 
 <header>
-    <h1>FIÈREMENT QUÉBÉCOIS</h1>
-    <p>Streetwear premium inspiré du Québec.</p>
-    <a href="#" class="button">Découvrir la collection</a>
+    <div class="logo">Quark</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+    </nav>
 </header>
 
-<section class="section">
-    <h2>Notre Mission</h2>
-    <p>
-        Créer des vêtements de haute qualité qui représentent la fierté,
-        l'identité et la culture québécoise.
-    </p>
-</section>
+<main>
+    <div class="hero">
+        <h1>Quark</h1>
+        <p>
+            I read on elite theory, cultural evolution and market mechanisms,
+            and study the political implications of cybernetic, libidinal and
+            civilizational philosophy.
+        </p>
 
-<section class="section">
-    <h2>Collections</h2>
-
-    <div class="products">
-        <div class="card">
-            <img src="https://via.placeholder.com/280x350" alt="Hoodie">
-            <h3>Fleur de Lys</h3>
-            <p>Design minimaliste et élégant.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/280x350" alt="Hoodie">
-            <h3>Premium</h3>
-            <p>Qualité supérieure et style moderne.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/280x350" alt="Hoodie">
-            <h3>Indépendant</h3>
-            <p>Pour ceux qui croient en l'avenir du Québec.</p>
+        <div class="links">
+            <a href="#">Discord</a>
+            <a href="#">X</a>
+            <a href="#">Reddit</a>
+            <a href="#">GitHub</a>
         </div>
     </div>
-</section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="item">
+            <p>I'm not sure how to use Git.</p>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h2>Interests</h2>
+
+        <div class="item">
+            <h3>Political philosophy</h3>
+            <p>
+                I read on elite theory, cultural evolution and market mechanisms,
+                and study the political implications of cybernetic, libidinal and
+                civilizational philosophy.
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>Computer science</h3>
+            <p>
+                I enjoy systems, networks, automation, software, and technical projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="item">
+            <h3>Project One</h3>
+            <p>A minimal project description goes here.</p>
+        </div>
+
+        <div class="item">
+            <h3>Project Two</h3>
+            <p>Another clean project description goes here.</p>
+        </div>
+    </section>
+</main>
 
 <footer>
-    © 2026 Fièrement Québécois — Tous droits réservés.
+    © 2026 Quark Style Page
 </footer>
 
+</div>
 </body>
 </html>
