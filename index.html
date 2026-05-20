@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quark Style Page</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f1ea;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 35px 22px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #111;
+    padding-bottom: 18px;
+    margin-bottom: 45px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    margin-top: 60px;
+    margin-bottom: 75px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1;
+    margin: 0 0 20px;
+    font-weight: normal;
+}
+
+.hero p {
+    max-width: 720px;
+    font-size: 22px;
+    line-height: 1.55;
+}
+
+.links {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: #111;
+    border: 1px solid #111;
+    padding: 9px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.links a:hover {
+    background: #111;
+    color: #f4f1ea;
+}
+
+section {
+    border-top: 1px solid #111;
+    padding: 35px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    margin: 0 0 20px;
+    font-weight: normal;
+}
+
+.item {
+    margin-bottom: 28px;
+}
+
+.item h3 {
+    font-size: 22px;
+    margin: 0 0 8px;
+}
+
+.item p {
+    font-size: 18px;
+    line-height: 1.55;
+    max-width: 760px;
+    margin: 0;
+}
+
+footer {
+    border-top: 1px solid #111;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+<header>
+    <div class="logo">Quark</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<main>
+    <div class="hero">
+        <h1>Quark</h1>
+        <p>
+            I read on elite theory, cultural evolution and market mechanisms,
+            and study the political implications of cybernetic, libidinal and
+            civilizational philosophy.
+        </p>
+
+        <div class="links">
+            <a href="#">Discord</a>
+            <a href="#">X</a>
+            <a href="#">Reddit</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="item">
+            <p>I'm not sure how to use Git.</p>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h2>Interests</h2>
+
+        <div class="item">
+            <h3>Political philosophy</h3>
+            <p>
+                I read on elite theory, cultural evolution and market mechanisms,
+                and study the political implications of cybernetic, libidinal and
+                civilizational philosophy.
+            </p>
+        </div>
+
+        <div class="item">
+            <h3>Computer science</h3>
+            <p>
+                I enjoy systems, networks, automation, software, and technical projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="item">
+            <h3>Project One</h3>
+            <p>A minimal project description goes here.</p>
+        </div>
+
+        <div class="item">
+            <h3>Project Two</h3>
+            <p>Another clean project description goes here.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2026 Quark Style Page
+</footer>
+
+</div>
+</body>
+</html>
